@@ -1,0 +1,37 @@
+<head>
+  <title>telephone</title>
+</head>
+
+<body>
+</body>
+
+<template name="home">
+  <a href="{{pathFor 'newRamble'}}">Start Something New</a>
+  {{> loginButtons}}
+  {{#each ramble}}
+    {{> block}}
+  {{/each}}
+</template>
+
+<template name="block">
+  <a href="{{pathFor 'add'}}">{{lastLine}}</a>
+</template>
+
+<template name="form">
+<form>
+    <input type="text" id="line-1" />
+    <input type="text" id="line-2" />
+    <input type="text" id="line-3" />
+    <input type="submit">
+  </form>
+</template>
+
+<template name="newRamble">
+  {{> form }}
+</template>
+
+<template name="add">
+  {{length}}
+  {{lastLine}}
+  {{> form }}
+</template>
