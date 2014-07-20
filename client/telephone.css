@@ -1,1 +1,30 @@
 /* CSS declarations go here */
+
+body {
+  font-family: Georgia, serif;
+}
+
+.center {
+  margin: 0 auto;
+  width: 60em;
+}
+
+
+input {
+  width: 100%;
+  padding: 2em;
+  margin: 1em;
+  border: 0em;
+  border-bottom: 1px solid #999;
+
+}
+
+.ramble {
+  width: 20em;
+  height: 20em;
+  background-color: #333;
+  color: #FFF;
+  margin: 1em;
+  float: left;
+  padding: 2em;
+}

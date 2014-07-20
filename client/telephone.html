@@ -6,15 +6,23 @@
 </body>
 
 <template name="home">
-  <a href="{{pathFor 'newRamble'}}">Start Something New</a>
-  {{> loginButtons}}
+  {{> header}}
+  <div class="center">
   {{#each ramble}}
     {{> block}}
   {{/each}}
+  </div>
+</template>
+
+<template name="header">
+  <div>
+    <a href="{{pathFor 'newRamble'}}">Start Something New</a>
+    {{> loginButtons}}
+  </div>
 </template>
 
 <template name="block">
-  <a href="{{pathFor 'add'}}">{{lastLine}}</a>
+  <a class="ramble" href="{{pathFor 'add'}}">{{lastLine}}</a>
 </template>
 
 <template name="form">
